@@ -11,14 +11,14 @@ import matplotlib.pyplot as plt
 from matplotlib.font_manager import FontProperties
 
 
-dirPath = '/Users/akimlavrinenko/Documents/coding/data/cought/'
+dirPath = '/media/HDD/FOAM/cough/mesh_conv/'
 
-foldName = 'mesh_conv'
+foldName = 'plume_data'
 
 folders = openFoam().fast_scandir(dirPath)
 folders = [word for word in folders if foldName in word]
 folders.sort()
-listOfFileList, allFileList = openFoam().listfile(folders, '.dat')
+listOfFileList, allFileList = openFoam().listfile(folders, '.txt')
 allFileList.sort()
 #calculations
 
